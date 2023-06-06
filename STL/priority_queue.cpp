@@ -29,8 +29,8 @@ int main(){
     mini.push(0);
     mini.push(4);
     mini.push(3);
-    
-    cout<<"maxi size->"<<maxi.size()<<endl;
+
+    cout<<"mini size->"<<maxi.size()<<endl;
     int m = mini.size();
     for (int i = 0; i < m; i++)
     {
