@@ -29,6 +29,7 @@ int main(){
     cout<<"upper bound of 130 ->"<<upper_bound(v.begin(),v.end(),130)-v.begin()<<endl;
     cout<<"upper bound of 220 ->"<<upper_bound(v.begin(),v.end(),220)-v.begin()<<endl;
     cout<<"upper bound of 2000 ->"<<upper_bound(v.begin(),v.end(),2000)-v.begin()<<endl;
+    cout<<"upper bound of 221 ->"<<upper_bound(v.begin(),v.end(),221)-v.begin()<<endl;
 
 // ***max/min****
     int a = 45;
