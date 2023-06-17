@@ -7,6 +7,7 @@ int main(){
     s.push("messi");
     s.push("neymar");
     s.push("suarez");
+    s.push("foden");
 
     cout<<"Top Element-> "<<s.top()<<endl;
 
