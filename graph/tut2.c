@@ -11,6 +11,14 @@ struct Queue {
     int rear;
 };
 
+struct Node
+{
+    int *data;
+    struct Node *left;
+    struct Node *right;
+};
+
+
 // Function to create an empty queue
 void createQueue(struct Queue* queue) {
     queue->front = -1;
@@ -30,14 +38,14 @@ int isFull(struct Queue* queue) {
 // Function to add an element to the rear of the queue (enqueue)
 void enqueue(struct Queue* queue, int value) {
     if (isFull(queue)) {
-        printf("Queue is full. Cannot enqueue.\n");
+        // printf("Queue is full. Cannot enqueue.\n");
     } else {
         if (isEmpty(queue)) {
             queue->front = 0;
         }
         queue->rear++;
         queue->items[queue->rear] = value;
-        printf("Enqueued: %d\n", value);
+        // printf("Enqueued: %d\n", value);
     }
 }
 
@@ -55,7 +63,7 @@ int dequeue(struct Queue* queue) {
         } else {
             queue->front++;
         }
-        printf("Dequeued: %d\n", item);
+        // printf("Dequeued: %d\n", item);
         return item;
     }
 }
@@ -77,36 +85,39 @@ int main() {
     struct Queue queue;
     createQueue(&queue);
 
-    int choice, item;
+    int node;
+    int i = 2;
+    int visited[7]= {0,0,0,0,0,0,0};
+    int a[7][7] = {
+        {0,1,1,1,0,0,0},
+        {1,0,1,0,0,0,0},
+        {1,1,0,0,1,0,0},
+        {1,0,0,0,1,0,0},
+        {0,0,1,1,0,1,1},
+        {0,0,0,0,1,0,0},
+        {0,0,0,0,1,0,0}
+    };
 
-    while (1) {
-        printf("\nQueue Operations:\n");
-        printf("1. Enqueue\n");
-        printf("2. Dequeue\n");
-        printf("3. Display\n");
-        printf("4. Exit\n");
-
-        printf("Enter your choice: ");
-        scanf("%d", &choice);
-
-        switch (choice) {
-            case 1:
-                printf("Enter the element to enqueue: ");
-                scanf("%d", &item);
-                enqueue(&queue, item);
-                break;
-            case 2:
-                dequeue(&queue);
-                break;
-            case 3:
-                display(&queue);
-                break;
-            case 4:
-                exit(0);
-            default:
-                printf("Invalid choice. Please try again.\n");
+    printf("%d ", i);
+    visited[i] =1;
+    enqueue(&queue, i);
+    while (!isEmpty(&queue))
+    {
+        int node = dequeue(&queue);
+        for (int j = 0; j < 7; j++)
+        {
+            if (a[node][j] == 1 & visited[j] == 0)
+            {
+                printf("%d ", j);
+                visited[j] = 1;
+                enqueue(&queue, j);
+            }
+            
         }
+        
+        
     }
+    printf("\n");
 
     return 0;
 }
