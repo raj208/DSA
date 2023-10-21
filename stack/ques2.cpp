@@ -9,7 +9,6 @@ void insertAtBottom(stack<int> &s, int value) {
         s.push(value);
         return;
     }
-    
     int topValue = s.top();
     s.pop();
     
@@ -23,13 +22,12 @@ void reverseStack(stack<int> &s) {
     if (s.empty()) {
         return;
     }
-    
     int topValue = s.top();
     s.pop();
-    
     reverseStack(s);
     
     insertAtBottom(s, topValue);
+    
 }
 
 int main() {
@@ -64,4 +62,10 @@ int main() {
     cout << endl;
     
     return 0;
+}
+
+
+int main()
+{
+    the
 }
