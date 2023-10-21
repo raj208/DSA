@@ -1,5 +1,9 @@
 {
     "files.associations": {
+<<<<<<< HEAD
         "iostream": "cpp"
+=======
+        "type_traits": "c"
+>>>>>>> 05787d4646c3ad8751159c897a24c340b609455e
     }
 }
