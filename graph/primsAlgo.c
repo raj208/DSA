@@ -10,7 +10,6 @@ int findMinKey(int key[], bool mstSet[]) {
     for (int v = 0; v < V; v++) {
         if (!mstSet[v] && key[v] < min) {
             min = key[v];
-            
             min_index = v;
         }
     }
