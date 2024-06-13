@@ -27,7 +27,7 @@ int main(){
 
     cout<<m.size();
 
-    cout<<m.count("rohit")<<endl; //if present --> 1
+    cout<<m.count("rohit")<<"count testing "<<endl; //if present --> 1
     cout<<m.count("rohit")<<endl; // if not_present -->0
 
     m.erase("raj");
