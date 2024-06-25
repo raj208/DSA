@@ -13,6 +13,7 @@ int sol(vector<int>&difficult, vector<int>&profit, vector<int>&worker)
     int currProfit = 0;
     int maxProfit = 0;
     sort(v.begin(), v.end());
+    sort(worker.begin(), worker.end());
     int i=0;
     int j=0;
     while (i<worker.size())
