@@ -13,14 +13,16 @@ int makeboquets(vector<int>&v, int k, int mid)
         {
             consecutive++;
         }
-        else {
-            consecutive = 0;
-        }
-        if (consecutive == k)
+        else if (consecutive == k)
         {
             count++;
             consecutive = 0;
         }
+        else{
+            consecutive = 0;
+            
+        }
+        
         
     }
     return count;
