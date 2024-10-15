@@ -1,11 +1,10 @@
 #include<stdio.h>
 int main()
 {
-    char name;
-    gets(char);
-    printf("muchiram majhi\n");
-    printf("rajendra majhi\n");
-    printf("mahendra majhi\n");
+    int a=10;
+    int b=8;
+    int c=a+b;
+    printf("%d",c);
 
 
     return 0;
